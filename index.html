@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Dynamic Title -->
+    <title id="dynamic-title">Samiul Tasab Sakhawat | Digital Architect</title>
+    <meta name="description" content="Dynamic futuristic portfolio of Samiul Tasab Sakhawat - Real-time digital experience">
+    <meta name="keywords" content="Samiul Tasab Sakhawat, web developer, programmer, Bangladesh, HTML, CSS, C, Python, dynamic portfolio">
+    <meta name="author" content="Samiul Tasab Sakhawat">
+    <link rel="canonical" href="https://sakhawat.pro.bd">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Samiul Tasab Sakhawat | Dynamic Portfolio">
+    <meta property="og:description" content="Experience a real-time futuristic portfolio">
+    <meta property="og:url" content="https://sakhawat.pro.bd">
+    <meta property="og:type" content="website">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; connect-src 'self' https://api.github.com https://api.openweathermap.org; img-src 'self' data: https:;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Samiul Tasab Sakhawat",
+        "url": "https://sakhawat.pro.bd",
+        "jobTitle": "Digital Architect & Developer",
+        "knowsAbout": ["HTML", "CSS", "C", "Python", "Web Development"],
+        "sameAs": [
+            "https://github.com/samiultasabsakhawat",
+            "https://linkedin.com/in/samiultasabsakhawat",
+            "https://facebook.com/samiultasabsakhawat",
+            "https://instagram.com/samiultasabsakhawat",
+            "https://x.com/samiultasabsakhawat"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Dynamic Time Display -->
+    <div id="time-display" class="time-display">
+        <div id="live-clock" class="live-clock">00:00:00</div>
+        <div id="live-date" class="live-date">Loading...</div>
+        <div id="live-greeting" class="live-greeting"></div>
+    </div>
+    
+    <!-- Weather Widget -->
+    <div id="weather-widget" class="weather-widget">
+        <div id="weather-info">Loading weather...</div>
+    </div>
+    
+    <!-- Visitor Counter -->
+    <div id="visitor-counter" class="visitor-counter">
+        <span id="visitor-count">0</span> visitors
+    </div>
+    
+    <!-- Particles Canvas -->
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+    
+    <!-- 3D Spine Container -->
+    <div id="spine-container" aria-hidden="true">
+        <div id="spine-wrapper"></div>
+    </div>
+    
+    <!-- Main Content -->
+    <main id="app" class="main-container">
+        <!-- Loading Screen -->
+        <div id="loading-screen" class="loading-screen">
+            <div class="loader">
+                <div class="loader-spine"></div>
+                <p class="loading-text">INITIALIZING NEURAL INTERFACE...</p>
+                <div id="loading-progress" class="loading-progress">0%</div>
+            </div>
+        </div>
+        
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title glitch-text" data-text="SAMIUL TASAB SAKHAWAT">
+                    SAMIUL TASAB SAKHAWAT
+                </h1>
+                <div class="hero-typewriter">
+                    <span id="typewriter-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-subtitle">DIGITAL ARCHITECT & CODE WEAVER</p>
+                
+                <!-- Dynamic Status -->
+                <div id="dynamic-status" class="dynamic-status">
+                    <span id="status-indicator" class="status-dot"></span>
+                    <span id="status-text">Online</span>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="#about" class="cta-button red">EXPLORE</a>
+                    <a href="#social" class="cta-button blue">CONNECT</a>
+                </div>
+            </div>
+            <div class="scroll-indicator" aria-hidden="true">
+                <span>SCROLL</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+        
+        <!-- Dynamic Content Sections -->
+        <div id="dynamic-content"></div>
+        
+        <!-- GitHub Activity -->
+        <section class="content-section left" id="github-activity">
+            <div class="content-card">
+                <h2>// GITHUB_ACTIVITY</h2>
+                <div id="github-repos" class="github-repos">
+                    <p>Loading GitHub activity...</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer with Dynamic Info -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-text">&copy; <span id="current-year">2024</span> SAMIUL TASAB SAKHAWAT</p>
+                <p class="footer-subtext">[ SYSTEM_SECURE // ENCRYPTED_CHANNEL ]</p>
+                <p class="footer-domain">sakhawat.pro.bd</p>
+                <p id="page-load-time" class="footer-info"></p>
+                <p id="user-info" class="footer-info"></p>
+            </div>
+        </footer>
+    </main>
+    
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/security.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/dynamic.js"></script>
+    <script src="js/content.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/spine.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

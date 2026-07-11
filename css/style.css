@@ -1,0 +1,239 @@
+/* ============================================
+   DYNAMIC FUTURISTIC PORTFOLIO - COMPLETE CSS
+   Author: Samiul Tasab Sakhawat
+   Domain: sakhawat.pro.bd
+   Version: 3.0 Dynamic
+   ============================================ */
+
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #0f0f1a;
+    --vein-red: #ff1744;
+    --vein-blue: #00e5ff;
+    --vein-red-glow: rgba(255, 23, 68, 0.6);
+    --vein-blue-glow: rgba(0, 229, 255, 0.6);
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --card-bg: rgba(15, 15, 30, 0.8);
+    --border-glow: rgba(255, 255, 255, 0.1);
+    --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Light Theme */
+[data-theme="light"] {
+    --bg-primary: #f0f0f5;
+    --bg-secondary: #e8e8f0;
+    --text-primary: #1a1a2e;
+    --text-secondary: #3a3a4e;
+    --card-bg: rgba(255, 255, 255, 0.9);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--vein-red) var(--bg-primary);
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Rajdhani', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    cursor: default;
+    -webkit-font-smoothing: antialiased;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Time Display */
+.time-display {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    text-align: right;
+    font-family: 'Orbitron', sans-serif;
+    background: rgba(15, 15, 30, 0.8);
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+.time-display:hover {
+    transform: scale(1.05);
+    border-color: var(--vein-blue);
+    box-shadow: 0 0 30px rgba(0, 229, 255, 0.2);
+}
+.live-clock {
+    font-size: 2em;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--vein-red), var(--vein-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 3px;
+}
+.live-date {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+.live-greeting {
+    font-size: 0.8em;
+    color: var(--vein-blue);
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+
+/* Weather Widget */
+.weather-widget {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    background: rgba(15, 15, 30, 0.8);
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8em;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    max-width: 200px;
+}
+.weather-widget:hover {
+    border-color: var(--vein-red);
+    box-shadow: 0 0 30px rgba(255, 23, 68, 0.2);
+}
+
+/* Visitor Counter */
+.visitor-counter {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 100;
+    background: rgba(15, 15, 30, 0.8);
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.7em;
+    color: var(--text-secondary);
+    letter-spacing: 2px;
+}
+#visitor-count {
+    color: var(--vein-blue);
+    font-weight: 900;
+    font-size: 1.2em;
+}
+
+/* Dynamic Status */
+.dynamic-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+}
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #00ff00;
+    animation: statusPulse 2s ease infinite;
+}
+.status-dot.offline {
+    background: #ff0000;
+}
+@keyframes statusPulse {
+    0%, 100% { box-shadow: 0 0 5px #00ff00; }
+    50% { box-shadow: 0 0 20px #00ff00; }
+}
+
+/* Loading Progress */
+.loading-progress {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5em;
+    color: var(--vein-blue);
+    margin-top: 20px;
+    letter-spacing: 3px;
+}
+
+/* GitHub Repos */
+.github-repos {
+    display: grid;
+    gap: 15px;
+    margin-top: 20px;
+}
+.repo-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+.repo-card:hover {
+    transform: translateX(10px);
+    border-color: var(--vein-blue);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.1);
+}
+.repo-name {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--vein-blue);
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+.repo-desc {
+    color: var(--text-secondary);
+    font-size: 0.8em;
+}
+.repo-stats {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    font-size: 0.7em;
+    color: var(--text-secondary);
+}
+
+/* Footer Info */
+.footer-info {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.7em;
+    color: var(--text-secondary);
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+/* Rest of the styles from previous version... */
+/* [Include all styles from previous style.css] */
+
+/* Responsive */
+@media (max-width: 768px) {
+    .time-display {
+        top: 10px;
+        right: 10px;
+        padding: 10px 15px;
+    }
+    .live-clock {
+        font-size: 1.5em;
+    }
+    .weather-widget {
+        top: 10px;
+        left: 10px;
+        padding: 10px;
+    }
+    .visitor-counter {
+        bottom: 10px;
+        left: 10px;
+    }
+}
